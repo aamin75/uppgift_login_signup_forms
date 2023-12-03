@@ -1,12 +1,24 @@
-<form id="signupForm" action="/index.html">
-  <h4>Log in Form</h4>
-  <label for="username">User name:</label><br>
-  <input type="text" id="username" name="username"><br>
-  <label for="epost">Email:</label><br>
-  <input type="email" id="epost" name="epost"><br>
-  <label for="fullname">Full name:</label><br>
-  <input type="text" id="fullname" name="fullname"><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/html" href="style.css" />
+    <title>Sign-Up page</title>
+  </head>
+  <body>
+    <form id="signupform">
+      <h4>Sign up form</h4>
+      <label for="signupusername">User name</label><br>
+      <input type="text" id="signupusername" name="signupusername"><br>
+      <label for="signupepost">Email:</label><br>
+      <input type="email" id="signupepost" name="signupepost"><br>
+      <label for="signupfullname">Full name:</label><br>
+      <input type="text" id="signupfullname" name="signupfullname"><br>
+      <label for="signuppassword">Password</label><br>
+      <input type="password" name="signuppassword" id="signuppassword"><br><br>
+      <input type="button" value="Submit" onclick="signupUser()">
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

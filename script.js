@@ -1,22 +1,42 @@
 const loginBtn = document.getElementById("loginBtn");
-const signupBtn = document.getElementById('signupBtn');
-const closeBtnlogin = document.getElementById("closeBtnlogin");
+const signupBtn = document.getElementById("signupBtn");
 
-loginBtn.addEventListener('click', () => {
-  // const loginDia = document.getElementById("loginDialog");
-  // const loginF = document.getElementById("loginForm");
-  // loginF.style.display = "block";
+function loginUser() {
+  var username = document.getElementById('loginusername').value;
+  var password = document.getElementById('loginpassword').value;
+
+  if (username && password) {
+      sessionStorage.setItem('username', username);
+      sessionStorage.setItem('password', password);
+      // alert(username);
+      window.location.href = 'display.html';
+  } else {
+      alert('Please enter both username and password.');
+  }
+};
+
+function signupUser() {
+  var username = document.getElementById('signupusername').value;
+  var password = document.getElementById('signuppassword').value;
+  var epost = document.getElementById('signupepost').value;
+  var fullname = document.getElementById('signupfullname').value;
+
+  if (username && password && epost && fullname) {
+      sessionStorage.setItem('username', username);
+      sessionStorage.setItem('password', password);
+      sessionStorage.setItem('epost', epost);
+      sessionStorage.setItem('fullname', fullname);
+      // alert(username);
+      window.location.href = 'display.html';
+  } else {
+      alert('Please enter all username, password, email and password.');
+  }
+};
+
+loginBtn.addEventListener('click', ()=>{
   window.location = "/login.html";
 });
 
-closeBtnlogin.addEventListener('click', () => {
-  const loginDia = document.getElementById("loginDialog");
-  loginDia.style.display = "none";
-});
-
-signupBtn.addEventListener('click', () => {
-  // const loginDia = document.getElementById("signupDialog");
-  // loginDia.style.display = "block";
-  
+signupBtn.addEventListener('click', ()=>{
   window.location = "/signup.html";
 });

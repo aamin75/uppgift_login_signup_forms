@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data</title>
+  </head>
+  <body>
+    <h3>Display user data</h3>
+    <p id="usernameP"></p>
+    <p id="epostP"></p>
+    <p id="fullnameP"></p>
+    <p id="passwordP"></p>
+    <script >
+      var username = sessionStorage.getItem('username');
+      var password = sessionStorage.getItem('password');
+      document.getElementById('usernameP').innerHTML=username;
+      document.getElementById('passwordP').innerHTML=password;
+      if(sessionStorage.length>2){
+        var epost = sessionStorage.getItem('epost');
+        var fullname = sessionStorage.getItem('fullname');
+        document.getElementById('epostP').innerHTML=epost;
+        document.getElementById('fullnameP').innerHTML=fullname;
+      }
+    </script>
+  </body>
+</html>
