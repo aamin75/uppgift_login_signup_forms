@@ -29,7 +29,7 @@ function signupUser() {
       // alert(username);
       window.location.href = 'display.html';
   } else {
-      alert('Please enter all username, password, email and password.');
+      alert('Please enter all username, email, full name and password.');
   }
 };
 
