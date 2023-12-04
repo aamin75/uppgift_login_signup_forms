@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/html" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/html" href="style.css" /> -->
+    <link rel="stylesheet" href="bootstrap.css" />
     <title>Sign-Up page</title>
   </head>
   <body>
     <form id="signupform">
-      <!-- oninput="parseInt(passwordRange.value)" -->
-      <h4>Sign up form</h4>
-      <label for="signupusername">User name</label><br>
-      <input type="text" id="signupusername" name="signupusername"><br>
-      <label for="signupepost">Email:</label><br>
-      <input type="email" id="signupepost" name="signupepost"><br>
-      <label for="signupfullname">Full name:</label><br>
-      <input type="text" id="signupfullname" name="signupfullname"><br>
-      <label for="signuppassword">Password</label><br>
-      <input type="password" name="signuppassword" id="signuppassword" oninput="measureStrengthness()"> <span id="strengthIndex"></span><br><br>
-      <input type="button" value="Submit" onclick="signupUser()">
+      <fieldset>
+        <legend>Sign up form</legend>
+        <label for="signupusername" class="form-label mt-4">User name</label
+        ><br />
+        <input
+          type="text"
+          id="signupusername"
+          name="signupusername"
+          class="form-control-sm"
+        /><br />
+        <label for="signupepost" class="form-label mt-4">Email:</label><br />
+        <input
+          type="email"
+          id="signupepost"
+          name="signupepost"
+          class="form-control-sm"
+        /><br />
+        <label for="signupfullname" class="form-label mt-4">Full name:</label
+        ><br />
+        <input
+          type="text"
+          id="signupfullname"
+          name="signupfullname"
+          class="form-control-sm"
+        /><br />
+        <label for="signuppassword" class="form-label mt-4">Password</label
+        ><br />
+        <input
+          type="password"
+          name="signuppassword"
+          id="signuppassword"
+          class="form-control-sm"
+          oninput="measureStrengthness()"
+        />
+        <span id="strengthIndex"></span><br /><br />
+        <input type="button" value="Submit" class="input-group-sm btn" onclick="signupUser()" />
+      </fieldset>
     </form>
     <script src="script.js"></script>
   </body>

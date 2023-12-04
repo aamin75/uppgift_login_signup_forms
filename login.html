@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/html" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/html" href="style.css" /> -->
+    <link rel="stylesheet" href="bootstrap.css" />
     <title>Log-In page</title>
   </head>
   <body>
     <form id="loginform">
-      <h4>Log in form</h4>
-      <label for="loginusername">User name</label><br>
-      <input type="text" id="loginusername" name="loginusername"><br>
-      <label for="loginpassword">Password</label><br>
-      <input type="password" name="loginpassword" id="loginpassword"><br><br>
-      <input type="button" value="Submit" onclick="loginUser()">
+      <fieldset>
+        <legend>Log in form</legend>
+        <label for="loginusername" class="form-label mt-4">User name</label
+        ><br />
+        <input
+          type="text"
+          id="loginusername"
+          name="loginusername"
+          class="form-control-sm"
+        /><br />
+        <label for="loginpassword" class="form-label mt-4">Password</label
+        ><br />
+        <input
+          type="password"
+          name="loginpassword"
+          id="loginpassword"
+          class="form-control-sm"
+        /><br /><br />
+        <input type="button" value="Submit" class="input-group-sm btn" onclick="loginUser()" />
+      </fieldset>
     </form>
     <script src="script.js"></script>
   </body>
