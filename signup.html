@@ -8,6 +8,7 @@
   </head>
   <body>
     <form id="signupform">
+      <!-- oninput="parseInt(passwordRange.value)" -->
       <h4>Sign up form</h4>
       <label for="signupusername">User name</label><br>
       <input type="text" id="signupusername" name="signupusername"><br>
@@ -16,7 +17,7 @@
       <label for="signupfullname">Full name:</label><br>
       <input type="text" id="signupfullname" name="signupfullname"><br>
       <label for="signuppassword">Password</label><br>
-      <input type="password" name="signuppassword" id="signuppassword"><br><br>
+      <input type="password" name="signuppassword" id="signuppassword" oninput="measureStrengthness()"> <span id="strengthIndex"></span><br><br>
       <input type="button" value="Submit" onclick="signupUser()">
     </form>
     <script src="script.js"></script>
