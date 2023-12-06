@@ -53,9 +53,9 @@ function signupUser() {
 };
 
 loginBtn.addEventListener('click', ()=>{
-  window.location = "/login.html";
+  window.location = "./login.html";
 });
 
 signupBtn.addEventListener('click', ()=>{
-  window.location = "/signup.html";
+  window.location = "./signup.html";
 });
