@@ -11,6 +11,7 @@
     <form id="signupform">
       <fieldset>
         <legend>Sign up form</legend>
+        <span id="signupwarning"></span><br />
         <label for="signupusername" class="form-label mt-4">User name</label
         ><br />
         <input
@@ -25,7 +26,8 @@
           id="signupepost"
           name="signupepost"
           class="form-control-sm"
-        /><br />
+          onchange="hideWarning()"
+        /><span id="emailwarning"></span><br />
         <label for="signupfullname" class="form-label mt-4">Full name:</label
         ><br />
         <input
@@ -44,7 +46,12 @@
           oninput="measureStrengthness()"
         />
         <span id="strengthIndex"></span><br /><br />
-        <input type="button" value="Submit" class="input-group-sm btn" onclick="signupUser()" />
+        <input
+          type="button"
+          value="Submit"
+          class="input-group-sm btn"
+          onclick="signupUser()"
+        />
       </fieldset>
     </form>
     <script src="script.js"></script>

@@ -12,17 +12,21 @@ function loginUser() {
     sessionStorage.setItem('password', password);
     window.location.href = 'display.html';
   } else {
-    alert('Please enter both username and password.');
+    // alert('Please enter both username and password.');
+    var loginwarning = document.getElementById('loginwarning');
+    loginwarning.style.color = 'red';
+    loginwarning.style.fontStyle = 'bold';
+    loginwarning.textContent = 'Please enter both username and password.';
   }
 };
 
-function measureStrengthness(){
+function measureStrengthness() {
   var password = document.getElementById('signuppassword').value;
   var strengthIndex = document.getElementById('strengthIndex');
-  if(strongPassword.test(password)) {
+  if (strongPassword.test(password)) {
     strengthIndex.style.color = "green";
     strengthIndex.textContent = 'Strong';
-  } else if(mediumPassword.test(password)) {
+  } else if (mediumPassword.test(password)) {
     strengthIndex.style.color = 'blue';
     strengthIndex.textContent = 'Medium';
   } else {
@@ -38,24 +42,37 @@ function signupUser() {
   var fullname = document.getElementById('signupfullname').value;
   var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   if (username && password && epost && fullname) {
-    if (emailRegex.test(epost)){
+    if (emailRegex.test(epost)) {
       sessionStorage.setItem('username', username);
       sessionStorage.setItem('password', password);
       sessionStorage.setItem('epost', epost);
       sessionStorage.setItem('fullname', fullname);
       window.location.href = 'display.html';
     } else {
-      alert("Email used is invalid, enter a valid email");
+      // alert("Email used is invalid, enter a valid email");
+      var emailwarning = document.getElementById('emailwarning');
+      emailwarning.style.color = 'red';
+      emailwarning.style.fontStyle = 'bold';
+      emailwarning.textContent = 'Email used is invalid, enter a valid email.';
     }
   } else {
-    alert('Please enter all username, email, full name and password.');
+    // alert('Please enter all username, email, full name and password.');
+    var signupwarning = document.getElementById('signupwarning');
+    signupwarning.style.color = 'red';
+    signupwarning.style.fontStyle = 'bold';
+    signupwarning.textContent = 'Please enter all username, email, full name and password.';
   }
 };
 
-loginBtn.addEventListener('click', ()=>{
+function hideWarning() {
+  var emailwarning = document.getElementById('emailwarning');
+  emailwarning.textContent = null;
+}
+
+loginBtn.addEventListener('click', () => {
   window.location.href = "login.html";
 });
 
-signupBtn.addEventListener('click', ()=>{
+signupBtn.addEventListener('click', () => {
   window.location.href = "signup.html";
 });
